@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小黄游戏-热门休闲小游戏推荐与在线试玩指南</title>
+    <meta name="description" content="小黄游戏专注于发现和推荐有趣、易上手的休闲小游戏。提供游戏分类、热门排行榜、玩法解析与试玩建议，帮助你快速找到适合自己的欢乐游戏时光。">
+    <meta name="keywords" content="小黄游戏,休闲游戏,小游戏推荐,在线小游戏,益智游戏,解压游戏,热门小游戏">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f6f8fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部 */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+            flex-wrap: wrap;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(145deg, #f9d423, #f7971e);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(249, 148, 30, 0.3);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .logo-text span {
+            color: #f7971e;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+        }
+
+        .main-nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #34495e;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #f7971e;
+            border-bottom-color: #f7971e;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f0f2f5;
+            border-radius: 30px;
+            padding: 6px 6px 6px 18px;
+            width: 260px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+
+        .search-box button {
+            background: #f7971e;
+            border: none;
+            color: #fff;
+            border-radius: 24px;
+            padding: 8px 18px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #e67e22;
+        }
+
+        /* 首屏横幅 */
+        .hero-section {
+            background: linear-gradient(135deg, #fffaf0 0%, #ffefd5 100%);
+            border-radius: 24px;
+            margin-top: 28px;
+            padding: 48px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            flex: 1 1 500px;
+        }
+
+        .hero-content .tagline {
+            display: inline-block;
+            background: #f7971e;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+            color: #1a1a2e;
+            line-height: 1.3;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            color: #5d6d7e;
+            margin-bottom: 28px;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #f7971e;
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+            box-shadow: 0 6px 14px rgba(247, 151, 30, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(247, 151, 30, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #f7971e;
+            color: #f7971e;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: #f7971e;
+            color: #fff;
+        }
+
+        .hero-art {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-art .game-emoji {
+            font-size: 140px;
+            filter: drop-shadow(0 12px 20px rgba(0,0,0,0.1));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
+
+        /* 分类导航 */
+        .category-section {
+            margin-top: 48px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-title h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .section-title .line {
+            flex: 1;
+            height: 3px;
+            background: linear-gradient(to right, #f7971e, transparent);
+            border-radius: 2px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+        }
+
+        .category-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #f0f0f0;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(247, 151, 30, 0.15);
+            border-color: #f7971e;
+        }
+
+        .category-card .icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .category-card p {
+            font-size: 13px;
+            color: #95a5a6;
+            margin-top: 4px;
+        }
+
+        /* 热门推荐 */
+        .hot-games {
+            margin-top: 52px;
+        }
+
+        .hot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .game-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+
+        .game-thumb {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 62px;
+            position: relative;
+        }
+
+        .thumb-yellow { background: linear-gradient(145deg, #fff3e0, #ffe0b2); }
+        .thumb-orange { background: linear-gradient(145deg, #ffe0b2, #ffcc80); }
+        .thumb-peach { background: linear-gradient(145deg, #ffecb3, #ffd54f); }
+        .thumb-light { background: linear-gradient(145deg, #fff9c4, #ffee58); }
+
+        .game-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 14px;
+            backdrop-filter: blur(4px);
+        }
+
+        .game-info {
+            padding: 18px 18px 22px;
+        }
+
+        .game-info h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #1a1a2e;
+        }
+
+        .game-info .game-meta {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .game-info .game-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .game-info .desc {
+            font-size: 14px;
+            color: #5d6d7e;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .play-btn {
+            background: #f7971e;
+            color: #fff;
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 24px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .play-btn:hover {
+            background: #e67e22;
+        }
+
+        /* 今日更新 */
+        .update-section {
+            margin-top: 52px;
+            background: #fff;
+            border-radius: 24px;
+            padding: 36px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .update-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .update-item {
+            display: flex;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid #f4f4f4;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .update-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .update-number {
+            width: 36px;
+            height: 36px;
+            background: #fff3e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #f7971e;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .update-name {
+            font-size: 17px;
+            font-weight: 600;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .update-type {
+            background: #f8f9fa;
+            color: #6c757d;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .update-time {
+            font-size: 14px;
+            color: #adb5bd;
+        }
+
+        .update-tag {
+            background: #e8f8f5;
+            color: #1abc9c;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* 玩法攻略 */
+        .guide-section {
+            margin-top: 52px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .guide-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-left: 5px solid #f7971e;
+            transition: transform 0.3s;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .guide-card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+        }
+
+        .guide-card p {
+            font-size: 15px;
+            color: #5d6d7e;
+            margin-bottom: 12px;
+        }
+
+        .guide-card ul {
+            padding-left: 0;
+        }
+
+        .guide-card ul li {
+            font-size: 14px;
+            padding: 6px 0;
+            color: #34495e;
+            position: relative;
+            padding-left: 22px;
+        }
+
+        .guide-card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #f7971e;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-top: 52px;
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 20px 24px;
+            transition: background 0.3s;
+        }
+
+        .faq-item:hover {
+            background: #fffaf2;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 17px;
+            color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            background: #f7971e;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            padding-left: 40px;
+            color: #5d6d7e;
+            font-size: 15px;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #1a1a2e;
+            color: #b0b0c0;
+            margin-top: 64px;
+            padding: 50px 0 30px;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-about {
+            flex: 2 1 300px;
+        }
+
+        .footer-about h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            flex: 1 1 150px;
+        }
+
+        .footer-links h4 {
+            color: #fff;
+            margin-bottom: 16px;
+            font-size: 17px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-links ul li a:hover {
+            color: #f7971e;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2c3e50;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .header-inner {
+                height: auto;
+                padding: 16px 0;
+                gap: 12px;
+            }
+
+            .search-box {
+                width: 100%;
+                order: 3;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .hero-section {
+                padding: 30px 24px;
+            }
+
+            .hero-art .game-emoji {
+                font-size: 90px;
+            }
+
+            .section-title h2 {
+                font-size: 22px;
+            }
+
+            .update-item {
+                gap: 12px;
+            }
+
+            .faq-section {
+                padding: 24px;
+            }
+
+            .faq-answer {
+                padding-left: 0;
+            }
+
+            .faq-question {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 26px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+
+            .hot-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .game-info {
+                padding: 14px;
+            }
+
+            .game-info h3 {
+                font-size: 16px;
+            }
+
+            .game-thumb {
+                height: 100px;
+                font-size: 44px;
+            }
+
+            .game-badge {
+                font-size: 10px;
+                padding: 2px 8px;
+            }
+
+            .update-section {
+                padding: 20px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">黄</div>
+                <div class="logo-text">小黄<span>游戏</span></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hot">热门推荐</a></li>
+                    <li><a href="#category">游戏分类</a></li>
+                    <li><a href="#update">今日更新</a></li>
+                    <li><a href="#guide">玩法攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索你感兴趣的游戏">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 首屏 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="tagline">🎮 每日精选 · 快乐加倍</span>
+                <h1>发现好玩又有趣的<br>小黄游戏世界</h1>
+                <p>小黄游戏平台为你精选各类轻松有趣的休闲小游戏，无论是消磨碎片时间、解压放松，还是想和朋友一起欢乐互动，这里都能找到适合你的那款游戏。我们每天更新，只为让你玩得更开心。</p>
+                <div class="hero-btns">
+                    <a href="#hot" class="btn-primary">开始游戏之旅</a>
+                    <a href="#guide" class="btn-outline">查看玩法攻略</a>
+                </div>
+            </div>
+            <div class="hero-art">
+                <span class="game-emoji">🕹️</span>
+            </div>
+        </section>
+
+        <!-- 游戏分类 -->
+        <section class="category-section" id="category">
+            <div class="section-title">
+                <h2>热门游戏分类</h2>
+                <div class="line"></div>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <span class="icon">🧩</span>
+                    <h3>益智解谜</h3>
+                    <p>烧脑又上瘾</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">⚡</span>
+                    <h3>极速闯关</h3>
+                    <p>紧张刺激</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">🎈</span>
+                    <h3>休闲放松</h3>
+                    <p>轻松解压</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">👥</span>
+                    <h3>多人联机</h3>
+                    <p>好友同乐</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">🎲</span>
+                    <h3>趣味桌游</h3>
+                    <p>策略对决</p>
+                </div>
+                <div class="category-card">
+                    <span class="icon">🍭</span>
+                    <h3>消除合成</h3>
+                    <p>简单耐玩</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门推荐 -->
+        <section class="hot-games" id="hot">
+            <div class="section-title">
+                <h2>🔥 热门小黄游戏推荐</h2>
+                <div class="line"></div>
+            </div>
+            <div class="hot-grid">
+                <article class="game-card">
+                    <div class="game-thumb thumb-yellow">
+                        <span>🍄</span>
+                        <span class="game-badge">热门</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>蘑菇大冒险</h3>
+                        <div class="game-meta">
+                            <span>⭐ 4.8</span>
+                            <span>👥 2.1万</span>
+                        </div>
+                        <p class="desc">控制小蘑菇穿越神秘森林，收集金币并躲避各种障碍。操作简单，关卡丰富。</p>
+                        <a href="#" class="play-btn">开始游戏</a>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumb thumb-orange">
+                        <span>🐣</span>
+                        <span class="game-badge">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>小鸡快跑</h3>
+                        <div class="game-meta">
+                            <span>⭐ 4.6</span>
+                            <span>👥 1.3万</span>
+                        </div>
+                        <p class="desc">帮助迷路的小鸡找到回家的路，一路跳跃、滑翔，解决各种有趣的谜题。</p>
+                        <a href="#" class="play-btn">开始游戏</a>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumb thumb-peach">
+                        <span>🎯</span>
+                        <span class="game-badge">高分</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>疯狂标靶</h3>
+                        <div class="game-meta">
+                            <span>⭐ 4.7</span>
+                            <span>👥 9800</span>
+                        </div>
+                        <p class="desc">考验你的精准度和反应力！在限定时间内击中尽可能多的目标，挑战最高分。</p>
+                        <a href="#" class="play-btn">开始游戏</a>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumb thumb-light">
+                        <span>🍉</span>
+                        <span class="game-badge">休闲</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>水果消消乐</h3>
+                        <div class="game-meta">
+                            <span>⭐ 4.5</span>
+                            <span>👥 3.5万</span>
+                        </div>
+                        <p class="desc">经典的三消玩法配上清新的水果画风，搭配多种道具和关卡，越玩越上瘾。</p>
+                        <a href="#" class="play-btn">开始游戏</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 今日更新 -->
+        <section class="update-section" id="update">
+            <div class="section-title">
+                <h2>🕐 今日上新与更新</h2>
+                <div class="line"></div>
+            </div>
+            <div class="update-list">
+                <div class="update-item">
+                    <span class="update-number">01</span>
+                    <span class="update-name">彩虹消消乐</span>
+                    <span class="update-type">消除合成</span>
+                    <span class="update-tag">新增30关</span>
+                    <span class="update-time">2小时前</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-number">02</span>
+                    <span class="update-name">忍者跳跃</span>
+                    <span class="update-type">极速闯关</span>
+                    <span class="update-tag">新角色</span>
+                    <span class="update-time">5小时前</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-number">03</span>
+                    <span class="update-name">迷你农场</span>
+                    <span class="update-type">休闲养成</span>
+                    <span class="update-tag">活动开启</span>
+                    <span class="update-time">8小时前</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-number">04</span>
+                    <span class="update-name">拼图大师</span>
+                    <span class="update-type">益智解谜</span>
+                    <span class="update-tag">新图集</span>
+                    <span class="update-time">昨天</span>
+                </div>
+                <div class="update-item">
+                    <span class="update-number">05</span>
+                    <span class="update-name">星球防御</span>
+                    <span class="update-type">策略塔防</span>
+                    <span class="update-tag">平衡调整</span>
+                    <span class="update-time">昨天</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 玩法攻略 -->
+        <section class="guide-section" id="guide">
+            <div class="section-title">
+                <h2>📖 新手玩法攻略</h2>
+                <div class="line"></div>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <h3>🎯 快速上手技巧</h3>
+                    <p>初次接触小游戏，掌握基本操作是关键。多数游戏采用点击或滑动操作，建议先体验新手引导关卡。</p>
+                    <ul>
+                        <li>先熟悉基础操作模式</li>
+                        <li>注意观察游戏内的提示</li>
+                        <li>合理使用道具获取高分</li>
+                        <li>多尝试不同策略</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <h3>🏆 高分通关秘诀</h3>
+                    <p>想要在排行榜上名列前茅？除了熟练度，还需要掌握一些隐藏技巧和节奏感。</p>
+                    <ul>
+                        <li>连续消除可触发连击加成</li>
+                        <li>优先完成关卡目标</li>
+                        <li>利用特殊道具组合效果</li>
+                        <li>观看视频获取额外奖励</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <h3>👨‍👩‍👧‍👦 和朋友一起玩</h3>
+                    <p>小黄游戏支持好友对战与协作，邀请好友一起挑战更有趣，还能互相赠送体力和礼物。</p>
+                    <ul>
+                        <li>创建房间邀请好友</li>
+                        <li>好友排行榜实时比拼</li>
+                        <li>组队完成合作任务</li>
+                        <li>分享游戏领取奖励</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="section-title">
+                <h2>❓ 常见问题解答</h2>
+                <div class="line"></div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">小黄游戏需要下载安装吗？</div>
+                    <div class="faq-answer">不需要。小黄游戏平台内的绝大多数游戏都支持网页在线直接游玩，无需下载安装客户端，打开浏览器即可畅玩，方便快捷。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">游戏完全免费吗？</div>
+                    <div class="faq-answer">平台内的大部分游戏都是免费开放的，部分游戏可能包含内购道具或增值服务，但基础内容和核心玩法均可免费体验，请放心游玩。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持手机端访问吗？</div>
+                    <div class="faq-answer">支持。小黄游戏页面采用响应式设计，无论是电脑、平板还是手机浏览器，都能获得良好的游戏体验。建议使用最新版本的浏览器访问。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">游戏进度会保存吗？</div>
+                    <div class="faq-answer">大多数游戏会自动保存进度到您的浏览器本地。如果清除浏览器缓存，可能导致进度丢失，建议定期使用游戏内的账号绑定功能进行云端存档。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">遇到游戏无法加载怎么办？</div>
+                    <div class="faq-answer">首先请检查网络连接是否正常，然后尝试刷新页面。若问题仍然存在，可以尝试更换浏览器或清理浏览器缓存。大部分加载问题均可通过上述方式解决。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-about">
+                    <h3>关于小黄游戏</h3>
+                    <p>小黄游戏是一个专注于休闲娱乐的在线小游戏平台。我们致力于挖掘和推荐轻松有趣、玩法新颖的小游戏，为玩家提供纯净快乐的游戏环境。无论你身在何处，打开小黄游戏，就能随时享受游戏带来的乐趣。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#hot">热门游戏</a></li>
+                        <li><a href="#category">游戏分类</a></li>
+                        <li><a href="#update">最近更新</a></li>
+                        <li><a href="#guide">玩法攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">小游戏百科</a></li>
+                        <li><a href="#">游戏评测</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">合作联系</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 小黄游戏 | 本站所有游戏资源均来自网络，仅供学习交流使用，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+                      </html>

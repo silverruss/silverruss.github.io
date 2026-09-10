@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羊肚菌加盟种植-羊肚菌种植技术培训与加盟合作平台</title>
+    <meta name="description" content="羊肚菌加盟种植平台，提供羊肚菌种植技术培训、菌种供应、基地共建、产销对接等一站式加盟服务，帮助创业者科学开展羊肚菌种植项目。">
+    <meta name="keywords" content="羊肚菌加盟种植,羊肚菌种植技术,羊肚菌菌种,羊肚菌种植基地,羊肚菌加盟,羊肚菌种植项目">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background-color: #F7F5F0;
+            color: #3A2E20;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* 头部 */
+        .site-header {
+            background-color: #2C4A2E;
+            padding: 15px 0;
+            border-bottom: 4px solid #C9A063;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #C9A063;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #2C4A2E;
+            font-weight: bold;
+        }
+        .logo-text h1 {
+            font-size: 28px;
+            color: #F5EAD0;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .logo-text p {
+            font-size: 13px;
+            color: #C9D4C2;
+            letter-spacing: 1px;
+        }
+        .header-contact {
+            text-align: right;
+            color: #E8DFC8;
+            font-size: 14px;
+        }
+        .header-contact strong {
+            font-size: 20px;
+            color: #F0D9A8;
+            display: block;
+        }
+
+        /* 导航 */
+        .main-nav {
+            background-color: #3A5A3C;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav-list li a {
+            display: block;
+            padding: 14px 28px;
+            color: #F1EDE3;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .nav-list li a:hover,
+        .nav-list li a.active {
+            background-color: #C9A063;
+            color: #2C4A2E;
+        }
+
+        /* 首屏横幅 */
+        .hero {
+            background: linear-gradient(135deg, #1F3A22 0%, #3B5E3D 70%, #5A7A4A 100%);
+            padding: 55px 0;
+            color: #FAF6EC;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-content h2 {
+            font-size: 38px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: #FBE9C8;
+        }
+        .hero-content h2 span {
+            color: #F3C77A;
+        }
+        .hero-content p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            color: #DDE8D5;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background-color: #C9A063;
+            color: #1F3A22;
+            padding: 13px 32px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .btn-primary:hover {
+            background-color: #E6BC7A;
+            transform: translateY(-3px);
+        }
+        .btn-outline {
+            border: 2px solid #C9A063;
+            color: #F3E9D2;
+            padding: 11px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            background-color: rgba(201,160,99,0.2);
+            border-color: #E6BC7A;
+        }
+        .hero-facts {
+            background-color: rgba(0,0,0,0.25);
+            border-radius: 18px;
+            padding: 30px 25px;
+            border-left: 6px solid #C9A063;
+        }
+        .hero-facts h3 {
+            font-size: 20px;
+            color: #F7E2B5;
+            margin-bottom: 18px;
+        }
+        .hero-facts ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.2);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-facts ul li:last-child {
+            border-bottom: none;
+        }
+        .hero-facts ul li::before {
+            content: "✔";
+            color: #C9A063;
+            font-weight: bold;
+        }
+
+        /* 模块标题 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h3 {
+            font-size: 32px;
+            color: #2C4A2E;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .section-title h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: #C9A063;
+            border-radius: 2px;
+        }
+        .section-title p {
+            color: #6B5B45;
+            margin-top: 12px;
+            font-size: 16px;
+        }
+
+        /* 合作流程 */
+        .process-section {
+            padding: 60px 0;
+            background-color: #FFFDF9;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .process-item {
+            background-color: #F6F1E7;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 5px solid #7A9A6C;
+            transition: all 0.3s;
+        }
+        .process-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(44,74,46,0.1);
+        }
+        .process-step {
+            width: 50px;
+            height: 50px;
+            background-color: #2C4A2E;
+            color: #F5EAD0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0 auto 16px;
+        }
+        .process-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2C4A2E;
+        }
+        .process-item p {
+            font-size: 14px;
+            color: #5A4C38;
+        }
+
+        /* 关于羊肚菌 / 介绍 */
+        .about-section {
+            background-color: #F0ECE2;
+            padding: 60px 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-text h3 {
+            font-size: 30px;
+            color: #2C4A2E;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            color: #4A3E2E;
+        }
+        .about-benefit {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .benefit-tag {
+            background-color: #2C4A2E;
+            color: #F0E8D8;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .about-list {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .about-list h4 {
+            font-size: 22px;
+            color: #2C4A2E;
+            margin-bottom: 20px;
+            border-left: 5px solid #C9A063;
+            padding-left: 15px;
+        }
+        .about-list ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #EDE7DB;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .about-list ul li:last-child {
+            border-bottom: none;
+        }
+        .about-list ul li span {
+            background-color: #C9A063;
+            color: #2C4A2E;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* 种植技术要点 */
+        .tech-section {
+            padding: 60px 0;
+            background-color: #FFFDF9;
+        }
+        .tech-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .tech-card {
+            background: #F9F5EC;
+            border-radius: 16px;
+            padding: 28px;
+            border-left: 6px solid #7A9A6C;
+            transition: all 0.3s;
+        }
+        .tech-card:hover {
+            background-color: #F0EAD8;
+        }
+        .tech-card h4 {
+            font-size: 20px;
+            color: #2C4A2E;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tech-card h4 span {
+            background-color: #2C4A2E;
+            color: #C9A063;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .tech-card p {
+            font-size: 15px;
+            color: #4F4232;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: #F0ECE2;
+            padding: 60px 0;
+        }
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background-color: white;
+            border-radius: 14px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2C4A2E;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FAF7F0;
+            transition: background 0.3s;
+        }
+        .faq-question:hover {
+            background-color: #F1E9DA;
+        }
+        .faq-question::after {
+            content: "+";
+            font-size: 28px;
+            color: #C9A063;
+            font-weight: 400;
+        }
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #4F4232;
+            font-size: 15px;
+        }
+        .faq-item.active .faq-question::after {
+            content: "−";
+        }
+        .faq-item.active .faq-answer {
+            max-height: 250px;
+            padding: 0 25px 20px;
+        }
+
+        /* 合作咨询 */
+        .contact-section {
+            background-color: #2C4A2E;
+            padding: 50px 0;
+            color: #E8DFC8;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .contact-info h3 {
+            font-size: 28px;
+            color: #F5EAD0;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .contact-details {
+            margin-top: 25px;
+        }
+        .contact-details li {
+            padding: 8px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-details li::before {
+            content: "◆";
+            color: #C9A063;
+        }
+        .contact-form {
+            background-color: #3A5A3C;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1px solid #6B8A6D;
+            border-radius: 8px;
+            background-color: #F6F1E7;
+            font-size: 15px;
+            color: #2C4A2E;
+            transition: border 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #C9A063;
+            background-color: white;
+        }
+        .form-group textarea {
+            height: 90px;
+            resize: vertical;
+        }
+        .form-submit {
+            background-color: #C9A063;
+            color: #1F3A22;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .form-submit:hover {
+            background-color: #E0B875;
+            transform: scale(1.01);
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background-color: #1E2F1F;
+            padding: 30px 0;
+            color: #B8C4B0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 4px solid #C9A063;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 15px;
+        }
+        .footer-links a {
+            color: #D3DED0;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #C9A063;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .tech-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .logo-text h1 {
+                font-size: 22px;
+            }
+            .hero-content h2 {
+                font-size: 28px;
+            }
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .tech-cards {
+                grid-template-columns: 1fr;
+            }
+            .nav-list li a {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            .section-title h3 {
+                font-size: 24px;
+            }
+            .footer-links {
+                gap: 15px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">菌</div>
+                <div class="logo-text">
+                    <h1>羊肚菌加盟种植</h1>
+                    <p>菌业合作 · 技术共享 · 共创丰收</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                全国合作咨询热线
+                <strong>400-820-6158</strong>
+                周一至周日 9:00-21:00
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">加盟模式</a></li>
+                <li><a href="#">种植技术</a></li>
+                <li><a href="#">菌种供应</a></li>
+                <li><a href="#">基地考察</a></li>
+                <li><a href="#">成功案例</a></li>
+                <li><a href="#">资讯中心</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首屏横幅 -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h2>科学开展<span>羊肚菌种植</span><br>携手共建可持续盈利模式</h2>
+                <p>聚焦羊肚菌加盟种植全流程服务，从菌种选育、技术培训到产销对接，为种植户和创业者提供可落地的支持方案，助力特色农业稳健起步。</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn-primary">了解加盟政策</a>
+                    <a href="#" class="btn-outline">预约基地考察</a>
+                </div>
+            </div>
+            <div class="hero-facts">
+                <h3>为什么关注羊肚菌加盟种植？</h3>
+                <ul>
+                    <li>羊肚菌市场关注度持续上升，高端食材需求稳定</li>
+                    <li>种植周期相对较短，资金回笼节奏较快</li>
+                    <li>加盟模式可降低技术门槛，统一标准更省心</li>
+                    <li>公司+基地+农户模式，产销协同更有保障</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作流程 -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>羊肚菌加盟种植合作流程</h3>
+                <p>从初次咨询到首季采收，每一步都有专业团队协同支持</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-step">1</div>
+                    <h4>意向沟通</h4>
+                    <p>了解当地气候、土壤与设施条件，评估种植可行性，匹配最适宜的栽培模式。</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-step">2</div>
+                    <h4>技术培训</h4>
+                    <p>系统学习菌种处理、播种、发菌、出菇管理、病虫害防控等核心技术要点。</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-step">3</div>
+                    <h4>菌种与物资</h4>
+                    <p>提供优质羊肚菌菌种及营养袋等关键物资，确保源头可靠可追溯。</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-step">4</div>
+                    <h4>种植指导</h4>
+                    <p>技术员全程跟踪，定期巡访指导，关键环节远程协助，降低种植风险。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于羊肚菌与加盟优势 -->
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h3>羊肚菌种植：特色农业的理性选择</h3>
+                <p>羊肚菌是一种珍稀食用菌，因其独特的蜂窝状外形和鲜美口感，在餐饮市场和干货市场都拥有稳定的消费群体。近年来，随着栽培技术的逐步成熟，羊肚菌种植已经从“高深莫测”走向了标准化、规模化的道路。</p>
+                <p>加盟种植的核心价值在于“借力”——借助成熟的技术体系、菌种资源和销售渠道，减少自行摸索的试错成本。对于有土地资源、有意愿投入农业项目的个人或团体而言，这是一个值得认真评估的方向。</p>
+                <div class="about-benefit">
+                    <span class="benefit-tag">技术下沉</span>
+                    <span class="benefit-tag">菌种优选</span>
+                    <span class="benefit-tag">产销对接</span>
+                    <span class="benefit-tag">风险共担</span>
+                </div>
+            </div>
+            <div class="about-list">
+                <h4>加盟种植服务体系包含</h4>
+                <ul>
+                    <li><span>1</span>种植基地规划与土壤改良建议</li>
+                    <li><span>2</span>羊肚菌菌种供应与活力检测</li>
+                    <li><span>3</span>全周期技术指导（线上+线下）</li>
+                    <li><span>4</span>出菇期管理及采收标准培训</li>
+                    <li><span>5</span>干品加工与分级储存指导</li>
+                    <li><span>6</span>订单回收或协助对接销售渠道</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 种植技术要点 -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>关键种植技术要点</h3>
+                <p>掌握核心技术是羊肚菌种植成功的基础，以下要点供参考</p>
+            </div>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <h4><span>🌡️</span>温湿度控制</h4>
+                    <p>羊肚菌发菌期与出菇期对温度需求不同，地温保持在6-18℃区间较为适宜，空气湿度需根据生长阶段精细调节。科学的大棚设施能够有效缓冲环境变化。</p>
+                </div>
+                <div class="tech-card">
+                    <h4><span>🧪</span>土壤与营养</h4>
+                    <p>选择土质疏松、透气性好、有机质丰富的壤土或沙壤土。种植前需进行土壤处理，合理搭配营养袋，为菌丝生长提供充足且均衡的碳氮来源。</p>
+                </div>
+                <div class="tech-card">
+                    <h4><span>💧</span>水分管理</h4>
+                    <p>水分管理遵循“发菌期偏干、出菇前增湿”的原则。避免大水漫灌，推荐采用滴灌或雾化喷淋方式，保持土壤含水量在60%-65%左右为宜。</p>
+                </div>
+                <div class="tech-card">
+                    <h4><span>🛡️</span>病虫害防控</h4>
+                    <p>坚持预防为主，保持环境清洁，控制好温湿度是减少病害的关键。一旦发现杂菌感染或虫害，需及时隔离并采用生物或物理方法处理。</p>
+                </div>
+                <div class="tech-card">
+                    <h4><span>🌱</span>光照调节</h4>
+                    <p>羊肚菌菌丝生长阶段不需要光照，但原基形成和出菇期需要一定散射光刺激。适当遮阳网的使用能够提供“三分阳七分阴”的理想光照环境。</p>
+                </div>
+                <div class="tech-card">
+                    <h4><span>📅</span>轮作与休整</h4>
+                    <p>同一地块连年种植羊肚菌可能增加病害风险，建议与水稻、蔬菜等进行轮作，或采用休棚处理，以恢复土壤微生态平衡。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>羊肚菌加盟种植常见问题</h3>
+                <p>我们整理了您最关心的几个问题，希望能帮助您更清晰决策</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">羊肚菌种植的周期大概有多长？</div>
+                    <div class="faq-answer">一般情况下，从播种到采收需要4-6个月时间，具体受当地气候、播种时间和管理水平影响。秋季播种、春季出菇是常见的栽培模式，冬季温暖的地区也可以适当调整。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">没有种植经验可以加盟吗？</div>
+                    <div class="faq-answer">可以。加盟模式的核心就是为新手提供系统化培训，包括理论课程与基地实操，从零基础开始逐步掌握关键技术。同时，技术员会在关键节点给予指导，降低操作失误风险。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">加盟后菌种和物资如何保障？</div>
+                    <div class="faq-answer">我们与多家科研机构及菌种繁育基地保持合作，统一供应经过严格筛选和活力检测的羊肚菌菌种。营养袋等核心物资也由指定供应商生产，确保质量稳定可追溯。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">种植的羊肚菌销路如何解决？</div>
+                    <div class="faq-answer">我们协助对接多个销售渠道，包括鲜品市场、干货收购商和食品加工企业。同时也会指导加盟方进行产地烘干、分级包装，提升产品附加值，拓展电商销售可能。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">需要投入多少资金和土地？</div>
+                    <div class="faq-answer">具体投资规模取决于种植面积、大棚设施条件以及人工成本等因素。建议初次尝试者从小面积开始，例如1-2亩的试验田，待技术掌握后再逐步扩大规模，这样风险更可控。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作咨询 -->
+    <section class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h3>开启您的羊肚菌种植事业</h3>
+                <p>如果您正在寻找一个可靠的羊肚菌加盟种植伙伴，欢迎留下您的联系方式，我们的技术顾问将尽快与您取得联系，提供一对一的合作方案咨询。</p>
+                <ul class="contact-details">
+                    <li>免费获取《羊肚菌种植可行性分析手册》</li>
+                    <li>预约线上直播课程或线下基地考察</li>
+                    <li>了解当前区域加盟政策与扶持计划</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="联系电话" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="所在地区（如：四川成都）" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="简单描述您的种植意向或问题（如：预计种植面积、现有土地条件等）"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">提交咨询 · 获取合作方案</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">合作模式</a>
+                <a href="#">技术团队</a>
+                <a href="#">菌种科研</a>
+                <a href="#">新闻动态</a>
+                <a href="#">法律声明</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p>© 2025 羊肚菌加盟种植平台 | 专注于羊肚菌种植技术推广与产业合作</p>
+            <p>本站内容仅供行业交流与参考，不构成具体投资承诺。种植有风险，决策需理性。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+                // 关闭其他项
+                document.querySelectorAll('.faq-item').forEach(function(otherItem) {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+                      </html>
